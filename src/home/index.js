@@ -1,14 +1,20 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { history} from '../history'
+import {
+    Redirect
+  } from "react-router-dom";
 
-const Home = () => {
-    return(
-        <div>
-            <header>Home</header>
+class Home extends React.Component {
+    render(){
+        return(
             <div>
-                <button>Logout</button>
+                <header>Welcome To Visal's Assignment Portel!!!!</header>
+               <div>Please login to get the planets info. </div>
+              <div> <button onClick={() =>{this.props.history.push('/login')}}>Go to Login page</button></div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
-export default Home;
+export default withRouter(Home);
