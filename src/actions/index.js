@@ -13,7 +13,8 @@ const Types = {
     SET_ERRORMESSAGE:"SET_ERRORMESSAGE",
     SET_ISAUTHENTICATED:"SET_ISAUTHENTICATED",
     REFRESH_PLANETS:"REFRESH_PLANETS",
-    SET_FILTERPLANETLIST:"SET_FILTERPLANETLIST"
+    SET_FILTERPLANETLIST:"SET_FILTERPLANETLIST",
+    SET_ISOPENPOPUP:"SET_ISOPENPOPUP"
   };
 
   const setUserName = (userName) => ({
@@ -54,6 +55,11 @@ const Types = {
     payload: isError
   });
 
+  const setIsPopup = (isPopup) => ({
+    type: Types.SET_ISOPENPOPUP,
+    payload: isPopup
+  });
+
   const setErrorMessage = (errorMessage) => ({
     type: Types.SET_ERRORMESSAGE,
     payload: errorMessage
@@ -63,9 +69,11 @@ const Types = {
     type: Types.SET_ISAUTHENTICATED,
     payload: isAuthenticated
   });
+
   const refershPlanets = () => ({
     type: Types.REFRESH_PLANETS
   });
+
   const setFilterPlanetList = (planets) => ({
     type: Types.SET_FILTERPLANETLIST,
     payload:planets
@@ -84,5 +92,6 @@ const Types = {
     requestGetPlanets,
     receiverequestGetPlanets,
     refershPlanets,
-    setFilterPlanetList
+    setFilterPlanetList,
+    setIsPopup
   };

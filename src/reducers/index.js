@@ -9,7 +9,8 @@ const defaultState = {
   errorMessage:'',
   isAuthenticated:'false',
   planets:[],
-  filterPlanetList:[]
+  filterPlanetList:[],
+  isPopup:false
 };
 
 const todoReducer = (state = defaultState, action) => {
@@ -66,6 +67,11 @@ const todoReducer = (state = defaultState, action) => {
     case ACTIONS.Types.SET_FILTERPLANETLIST:{
       return {...state,
         filterPlanetList:action.payload
+      }
+    }
+    case ACTIONS.Types.SET_ISOPENPOPUP:{
+      return {...state,
+        isPopup:action.payload
       }
     }
     default:

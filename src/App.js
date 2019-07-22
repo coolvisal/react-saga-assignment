@@ -4,6 +4,7 @@ import './App.css';
 import Login from './login';
 import Home from './home';
 import Planets from './planets/planets'
+import PlanetInfo from './planets/planetInfo'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { history} from './history'
 import { connect } from "react-redux";
